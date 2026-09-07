@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Xinyue (Annie) Hu</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --ink: #171614;
+    --ink-soft: #6E6A63;
+    --accent: #2B3A55;
+    --rule: #E4E1D8;
+    --maxw: 640px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.65;
+    padding: 0 24px;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(43,58,85,0.35);
+  }
+
+  a:hover { text-decoration-color: var(--accent); }
+
+  .page {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(56px, 10vh, 96px) 0 96px;
+  }
+
+  header.hero {
+    margin-bottom: clamp(48px, 8vh, 72px);
+  }
+
+  h1 {
+    font-size: clamp(30px, 5vw, 38px);
+    font-weight: 500;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .tagline {
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+    max-width: 46ch;
+  }
+
+  nav.links {
+    font-size: 16px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  section {
+    margin-bottom: clamp(44px, 7vh, 64px);
+  }
+
+  section h2 {
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0 0 20px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+
+  .entry {
+    margin-bottom: 28px;
+  }
+
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+
+  .entry-title {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .entry-meta {
+    font-size: 15px;
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+
+  .entry p {
+    margin: 6px 0 0;
+    color: #3A3733;
+  }
+
+  footer {
+    font-size: 15px;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+
+  .placeholder {
+    background: rgba(43,58,85,0.06);
+    border-radius: 2px;
+    padding: 0 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .page { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <h1>Xinyue (Annie) Hu</h1>
+    <p class="tagline">
+      <span class="placeholder">[One or two sentences: what you study and what kind of problems you like solving — e.g. how people and AI systems make decisions together, and what that means for designing trustworthy systems.]</span>
+    </p>
+    <nav class="links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">CV (PDF)</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Selected work</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[Project title]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Year / venue]</span></div>
+      </div>
+      <p><span class="placeholder">[One paragraph: the problem, your approach, and what you found. Write it for a hiring manager skimming, not a committee — plain language, concrete outcome.]</span></p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[Project title]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Year / venue]</span></div>
+      </div>
+      <p><span class="placeholder">[Same format — problem, approach, outcome.]</span></p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[Project title]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Year / venue]</span></div>
+      </div>
+      <p><span class="placeholder">[Same format — problem, approach, outcome.]</span></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[Role, Company]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Dates]</span></div>
+      </div>
+      <p><span class="placeholder">[One line on what you did.]</span></p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[Role, Company]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Dates]</span></div>
+      </div>
+      <p><span class="placeholder">[One line on what you did.]</span></p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <div class="entry-title"><span class="placeholder">[PhD, program, university]</span></div>
+        <div class="entry-meta"><span class="placeholder">[Dates]</span></div>
+      </div>
+      <p><span class="placeholder">[Advisor, one line on focus.]</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="placeholder">[Short closing line — where you're based, what you're looking for, or just leave contact links above to speak for themselves.]</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
