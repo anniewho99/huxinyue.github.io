@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience · Xinyue (Annie) Hu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { cursor: crosshair; }
+    a, button { cursor: url("cursor-diamond-32.png") 16 16, pointer; }
+
+    :root { --gap: 24px; --text: #1c1a17; --text-dim: #4b4740; --maxw: 900px; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; min-height: 100svh; color: var(--text);
+      font-family: "Charis SIL", Palatino, Georgia, serif;
+      line-height: 1.5; display: grid; place-items: stretch;
+      background: #f4f2ec center / cover no-repeat url("background.jpg");
+      background-attachment: fixed;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: 0;
+      background: rgba(248, 246, 240, 0.85);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative; min-height: 100svh;
+      display: grid; grid-template-rows: auto 1fr auto;
+      isolation: isolate; z-index: 1;
+    }
+
+    .topnav { z-index: 1; display: flex; justify-content: center; padding: clamp(18px,4vh,56px) var(--gap); }
+    .topnav a {
+      color: var(--text); text-decoration: none; font-weight: 700;
+      font-size: clamp(18px,2.2vw,26px); text-underline-offset: 4px;
+    }
+    .topnav a:hover, .topnav a:focus { text-decoration: underline; }
+
+    .content {
+      z-index: 1; display: grid; place-items: center; align-content: start;
+      gap: clamp(16px,4vh,40px); padding: 0 var(--gap) var(--gap);
+    }
+    .copy { width: 100%; max-width: var(--maxw); }
+
+    .entry-list { list-style: none; padding-left: 0; margin: 10px 0 0; }
+    .entry-list li { line-height: 1.6; }
+    .entry-list li + li { margin-top: clamp(16px, 3vh, 26px); }
+
+    .entry-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .entry-title { font-weight: 700; }
+    .entry-meta { color: var(--text-dim); font-size: 15px; white-space: nowrap; }
+    .placeholder { background: rgba(28,26,23,0.06); border-radius: 2px; padding: 0 3px; }
+
+    .page-label {
+      z-index: 1; padding: var(--gap); text-align: center;
+      font-size: clamp(22px,3vw,34px); font-weight: 700; color: var(--text);
+      letter-spacing: .04em; user-select: none; pointer-events: none;
+    }
+
+    .sc {
+      text-transform: lowercase; font-variant-caps: small-caps;
+      font-feature-settings: "smcp" 1, "c2sc" 1; letter-spacing: .04em;
+    }
+    .sc::first-letter { text-transform: uppercase; font-variant-caps: normal; }
+
+    @media (max-width: 768px), (hover: none) and (pointer: coarse) {
+      html, body { height: auto; }
+      body { display: block; background-attachment: scroll; }
+      .hero { display: flex; flex-direction: column; min-height: 100vh; }
+      @supports (min-height: 100dvh) { .hero { min-height: 100dvh; } }
+      a, button { cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <nav class="topnav" aria-label="Primary">
+      <a class="sc" href="/">Home</a>
+    </nav>
+
+    <section class="content">
+      <div class="copy">
+        <ul class="entry-list">
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">[Role], Microsoft</span>
+              <span class="entry-meta">[Dates]</span>
+            </div>
+            <p><span class="placeholder">[One line on what you did.]</span></p>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">[Role], Toyota Research Institute</span>
+              <span class="entry-meta">[Dates]</span>
+            </div>
+            <p><span class="placeholder">[e.g. worked with Guy Rosman and Emily Sumner on human-AI shared control and driver trust.]</span></p>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">[Role], Honda Research Institute</span>
+              <span class="entry-meta">[Dates]</span>
+            </div>
+            <p><span class="placeholder">[e.g. collaborated with Kumar Akash on ...]</span></p>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Ph.D. Candidate, Cognitive Science, UC Irvine</span>
+              <span class="entry-meta">[Dates]</span>
+            </div>
+            <p><span class="placeholder">[Advisor: Mark Steyvers. One line on your dissertation focus.]</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="page-label sc">Experience</div>
+  </main>
+</body>
+</html>

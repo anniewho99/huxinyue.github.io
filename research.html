@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Research · Xinyue (Annie) Hu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    html, body { cursor: crosshair; }
+    a, button { cursor: url("cursor-diamond-32.png") 16 16, pointer; }
+
+    :root { --gap: 24px; --text: #1c1a17; --maxw: 900px; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; min-height: 100svh; color: var(--text);
+      font-family: "Charis SIL", Palatino, Georgia, serif;
+      line-height: 1.5; display: grid; place-items: stretch;
+      background: #f4f2ec center / cover no-repeat url("background.jpg");
+      background-attachment: fixed;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: 0;
+      background: rgba(248, 246, 240, 0.85);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative; min-height: 100svh;
+      display: grid; grid-template-rows: auto 1fr auto;
+      isolation: isolate; z-index: 1;
+    }
+
+    .topnav { z-index: 1; display: flex; justify-content: center; padding: clamp(18px,4vh,56px) var(--gap); }
+    .topnav a {
+      color: var(--text); text-decoration: none; font-weight: 700;
+      font-size: clamp(18px,2.2vw,26px); text-underline-offset: 4px;
+    }
+    .topnav a:hover, .topnav a:focus { text-decoration: underline; }
+
+    .content {
+      z-index: 1; display: grid; place-items: center; align-content: start;
+      gap: clamp(16px,4vh,40px); padding: 0 var(--gap) var(--gap);
+    }
+    .copy { width: 100%; max-width: var(--maxw); }
+    .copy h2 { margin: 18px 0 12px; font-size: clamp(20px,2.4vw,28px); }
+
+    .pub-list { list-style: none; padding-left: 0; margin: 10px 0 0; }
+    .pub-list li { line-height: 1.65; }
+    .pub-list li + li { margin-top: clamp(12px, 2.4vh, 22px); }
+
+    .title { font-weight: 700; }
+    .copy a { color: inherit; }
+    .copy a:hover { text-decoration: underline; }
+    .placeholder { background: rgba(28,26,23,0.06); border-radius: 2px; padding: 0 3px; }
+
+    .page-label {
+      z-index: 1; padding: var(--gap); text-align: center;
+      font-size: clamp(22px,3vw,34px); font-weight: 700; color: var(--text);
+      letter-spacing: .04em; user-select: none; pointer-events: none;
+    }
+
+    .sc {
+      text-transform: lowercase; font-variant-caps: small-caps;
+      font-feature-settings: "smcp" 1, "c2sc" 1; letter-spacing: .04em;
+    }
+    .sc::first-letter { text-transform: uppercase; font-variant-caps: normal; }
+
+    @media (max-width: 768px), (hover: none) and (pointer: coarse) {
+      html, body { height: auto; }
+      body { display: block; background-attachment: scroll; }
+      .hero { display: flex; flex-direction: column; min-height: 100vh; }
+      @supports (min-height: 100dvh) { .hero { min-height: 100dvh; } }
+      a, button { cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <nav class="topnav" aria-label="Primary">
+      <a class="sc" href="/">Home</a>
+    </nav>
+
+    <section class="content">
+      <div class="copy">
+        <h2>Projects</h2>
+        <ul class="pub-list">
+          <li>
+            <span class="title">[Project title]</span> — <span class="placeholder">[One or two sentences: the problem, your approach, and the outcome. Write for a hiring manager skimming, not a committee — plain language, concrete result.]</span>
+          </li>
+          <li>
+            <span class="title">[Project title]</span> — <span class="placeholder">[Same format — problem, approach, outcome.]</span>
+          </li>
+          <li>
+            <span class="title">[Project title]</span> — <span class="placeholder">[Same format — problem, approach, outcome.]</span>
+          </li>
+        </ul>
+
+        <h2>Publications</h2>
+        <ul class="pub-list">
+          <li>
+            <span class="title">[Paper title]</span>, <em>[Venue/journal]</em> ([Year]). <span class="placeholder">[optional link]</span>
+          </li>
+          <li>
+            <span class="title">[Paper title]</span>, <em>[Venue/journal]</em> ([Year]). <span class="placeholder">[optional link]</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="page-label sc">Research</div>
+  </main>
+</body>
+</html>
