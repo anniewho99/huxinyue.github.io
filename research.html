@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Research · Xinyue (Annie) Hu</title>
+  <title>Research · Xinyue Hu</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,15 +47,16 @@
       gap: clamp(16px,4vh,40px); padding: 0 var(--gap) var(--gap);
     }
     .copy { width: 100%; max-width: var(--maxw); }
-    .copy h2 { margin: 18px 0 12px; font-size: clamp(20px,2.4vw,28px); }
+    .intro { margin: 0 0 8px; }
+    .copy h2 { margin: 28px 0 12px; font-size: clamp(20px,2.4vw,28px); }
 
     .pub-list { list-style: none; padding-left: 0; margin: 10px 0 0; }
     .pub-list li { line-height: 1.65; }
     .pub-list li + li { margin-top: clamp(12px, 2.4vh, 22px); }
 
     .title { font-weight: 700; }
-    .copy a { color: inherit; }
-    .copy a:hover { text-decoration: underline; }
+    .copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+    .copy a:hover { text-decoration-thickness: 2px; }
     .placeholder { background: rgba(28,26,23,0.06); border-radius: 2px; padding: 0 3px; }
 
     .page-label {
@@ -87,27 +88,53 @@
 
     <section class="content">
       <div class="copy">
-        <h2>Projects</h2>
+        <p class="intro">My research asks how AI agents and their human teammates build models of each other: how an AI can infer and act on what its teammates want, how people make sense of an AI teammate's behavior, and what happens when an AI has to reason about how it is being read. Most of this work uses large-scale online experiments in custom multiplayer environments, combined with computational modeling.</p>
+
+        <h2>Dissertation: Designing AI Agents for Human Group Coordination</h2>
         <ul class="pub-list">
           <li>
-            <span class="title">[Project title]</span> — <span class="placeholder">[One or two sentences: the problem, your approach, and the outcome. Write for a hiring manager skimming, not a committee — plain language, concrete result.]</span>
+            <span class="title">Prosocial human-AI interaction</span> (with Honda Research Institute). In a spatial token-collection game, robots that help humans get helped back, and being helped by a robot makes people more likely to help others afterward. Merely watching a robot help someone else is not enough, because in a busy environment people mostly don't notice. A companion POMDP framework treats a human's prosociality as a latent state a robot can infer and shape.
           </li>
           <li>
-            <span class="title">[Project title]</span> — <span class="placeholder">[Same format — problem, approach, outcome.]</span>
+            <span class="title">Timing as a social signal in human-AI teams.</span> In a multiplayer Rush Hour puzzle where teams vote on moves under time pressure, an AI teammate's timing (voting first vs. last) changes how humans vote, hesitate, and follow. AI teammates make teams faster but are rated worse than human teammates, and their presence makes humans rate each other worse too. Current work replaces fixed timing with an adaptive, belief-based agent that infers each teammate's preferences and decides when to act.
           </li>
           <li>
-            <span class="title">[Project title]</span> — <span class="placeholder">[Same format — problem, approach, outcome.]</span>
+            <span class="title">Perceiving and repairing AI teammate behavior</span> (proposed). Why are AI teammates described as adversarial four times as often as humans, even when every move they make is optimal? One study reconstructs sessions for third-party observers to model how the attribution forms over time. A second extends the adaptive agent to track how each human is reading it and explain itself when that reading goes wrong.
+          </li>
+        </ul>
+
+        <h2>Other work</h2>
+        <ul class="pub-list">
+          <li>
+            <span class="title">Trust repair in shared-control driving</span> (Toyota Research Institute). Online experiment (N = 600) testing 8 trust-repair strategies across 3 shared-control scenarios after an AI driving error. Neutral AI expression and increased user control produced the largest trust recovery. IEEE ITSC 2025, invited session; two patent applications.
+          </li>
+          <li>
+            <span class="title">LLM calibration</span> (with Mark Steyvers and Padhraic Smyth). What language models know versus what people think they know, and how confidence is communicated. Nature Machine Intelligence, 2025.
+          </li>
+          <li>
+            <span class="title">RAG-grounded AI avatars for learning</span> (UCI Beall Applied Innovation). User studies comparing a persona-based AI avatar against a generic chatbot and static text on engagement and intent to continue, plus a Wizard-of-Oz study on whether users notice out-of-character responses.
+          </li>
+          <li>
+            <span class="title">Body ownership in VR</span> (University of Copenhagen, with Kasper Hornbæk). Eye-tracking study (N = 40) with Unity avatars, combined with micro-phenomenological interviews, on how gaze patterns shape embodiment. HCII 2025.
           </li>
         </ul>
 
         <h2>Publications</h2>
         <ul class="pub-list">
-          <li>
-            <span class="title">[Paper title]</span>, <em>[Venue/journal]</em> ([Year]). <span class="placeholder">[optional link]</span>
-          </li>
-          <li>
-            <span class="title">[Paper title]</span>, <em>[Venue/journal]</em> ([Year]). <span class="placeholder">[optional link]</span>
-          </li>
+          <li>Hu, X., Zahedi, Z., Akash, K., &amp; Steyvers, M. (2026). <a href="https://escholarship.org/uc/item/22w8p8s8" target="_blank" rel="noopener">How real-time signaling improves ad hoc collaboration</a>. <em>Proceedings of the Annual Meeting of the Cognitive Science Society</em>.</li>
+          <li>Zahedi, Z., Hu, X., Mehrotra, S., Steyvers, M., &amp; Akash, K. (2026). <a href="https://doi.org/10.1109/LRA.2026.3668141" target="_blank" rel="noopener">Strategic shaping of human prosociality: A latent-state POMDP framework</a>. <em>IEEE Robotics and Automation Letters</em>, 11(4), 4729–4736.</li>
+          <li>Steyvers, M., Tejeda, H., Kumar, A., Belem, C., Karny, S., Hu, X., Mayer, L. W., &amp; Smyth, P. (2025). <a href="https://mstrep.s3.amazonaws.com/publications/WhatLLMsKnowSteyversetal.pdf" target="_blank" rel="noopener">What large language models know and what people think they know</a>. <em>Nature Machine Intelligence</em>, 7(2), 221–231.</li>
+          <li>Hu, X., Mehrotra, S., Misu, T., Akash, K., &amp; Steyvers, M. (2025). <a href="https://mstrep.s3.amazonaws.com/publications/Huetal2025.pdf" target="_blank" rel="noopener">Toward promoting prosocial interactions between humans with autonomous agents</a>. <em>ACM Transactions on Human-Robot Interaction</em>, 15(1).</li>
+          <li>Hu, X., Mehrotra, S., Zahedi, Z., Misu, T., Akash, K., &amp; Steyvers, M. (2025). <a href="https://mstrep.s3.dualstack.us-east-1.amazonaws.com/publications/Huetal2025.pdf" target="_blank" rel="noopener">Does observing helping robots promote prosociality? Challenges of learning from observation in spatial environments</a>. <em>Proceedings of the ACM Collective Intelligence Conference</em>, 159–168.</li>
+          <li>Hu, X., Dees, L., Gopinath, D., Silva, A., DeCastro, J., Rosman, G., &amp; Sumner, E. (2025). <a href="https://ieeexplore.ieee.org/abstract/document/11423450/" target="_blank" rel="noopener">Enhancing trust repair in driving: The role of AI emotional expression and perceived control</a>. <em>IEEE International Conference on Intelligent Transportation Systems (ITSC)</em>.</li>
+          <li>Hu, X., Dalsgaard, T. S., &amp; Hornbæk, K. (2025). <a href="https://link.springer.com/chapter/10.1007/978-3-031-93861-0_5" target="_blank" rel="noopener">"A false reality"? A micro-phenomenology of avatars in VR</a>. <em>International Conference on Human-Computer Interaction (HCII)</em>, 77–96.</li>
+          <li>Hu, X., Akash, K., Mehrotra, S., Misu, T., &amp; Steyvers, M. (2024). <a href="https://mstrep.s3.us-east-1.amazonaws.com/publications/Huetal2024.pdf" target="_blank" rel="noopener">Prosocial acts towards AI shaped by reciprocation and awareness</a>. <em>Proceedings of the Annual Meeting of the Cognitive Science Society</em>, 46, 2270–2277.</li>
+        </ul>
+
+        <h2>Patents</h2>
+        <ul class="pub-list">
+          <li>Sumner, E. S., Rosman, G., Hu, X., DeCastro, J. A., Silva, A. M., Gopinath, D. E., et al. (2026). Building the trust of a vehicle occupant in an automated vehicle function. U.S. Patent Application 18/929,848.</li>
+          <li>Sumner, E. S., DeCastro, J. A., Rosman, G., Gopinath, D. E., Silva, A. M., Balch, T. M., et al. (2026). Systems and methods for predicting dissonance during shared control of a vehicle. U.S. Patent Application 18/923,840.</li>
         </ul>
       </div>
     </section>
