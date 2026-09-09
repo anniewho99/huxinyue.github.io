@@ -54,6 +54,13 @@
     .pub-list li { line-height: 1.65; }
     .pub-list li + li { margin-top: clamp(12px, 2.4vh, 22px); }
 
+    .demo {
+      display: block; width: 100%; max-width: 420px;
+      margin: 14px 0 6px; border-radius: 4px;
+      border: 1px solid rgba(28,26,23,0.12);
+      background: #000;
+    }
+
     .title { font-weight: 700; }
     .copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
     .copy a:hover { text-decoration-thickness: 2px; }
@@ -93,13 +100,12 @@
         <h2>Dissertation: Designing AI Agents for Human Group Coordination</h2>
         <ul class="pub-list">
           <li>
-            <span class="title">Prosocial human-AI interaction</span> (with Honda Research Institute). In a spatial token-collection game, robots that help humans get helped back, and being helped by a robot makes people more likely to help others afterward. Merely watching a robot help someone else is not enough, because in a busy environment people mostly don't notice. A companion POMDP framework treats a human's prosociality as a latent state a robot can infer and shape.
+            <span class="title">Prosocial human-AI interaction</span> (with Honda Research Institute). In a spatial token-collection game, three studies build up a picture of when helping spreads. People reciprocate directly when a robot helps them. That reciprocity also extends upstream, to other humans and other robots they weren't directly helped by. But merely watching a robot help someone else usually isn't enough, because in a busy environment people often don't notice it happened at all. A companion POMDP framework treats a human's prosociality as a latent state a robot can infer and shape.
+            <video class="demo" src="prosocial-demo.mp4" autoplay muted loop playsinline aria-label="Demo of the token-collection game with a robot helping a trapped human player"></video>
           </li>
           <li>
             <span class="title">Timing as a social signal in human-AI teams.</span> In a multiplayer Rush Hour puzzle where teams vote on moves under time pressure, an AI teammate's timing (voting first vs. last) changes how humans vote, hesitate, and follow. AI teammates make teams faster but are rated worse than human teammates, and their presence makes humans rate each other worse too. Current work replaces fixed timing with an adaptive, belief-based agent that infers each teammate's preferences and decides when to act.
-          </li>
-          <li>
-            <span class="title">Perceiving and repairing AI teammate behavior</span> (proposed). Why are AI teammates described as adversarial four times as often as humans, even when every move they make is optimal? One study reconstructs sessions for third-party observers to model how the attribution forms over time. A second extends the adaptive agent to track how each human is reading it and explain itself when that reading goes wrong.
+            <video class="demo" src="timing-demo.mp4" autoplay muted loop playsinline aria-label="Demo of the multiplayer Rush Hour puzzle with an AI teammate voting alongside human players"></video>
           </li>
         </ul>
 
